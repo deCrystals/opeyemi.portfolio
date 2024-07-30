@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Opeyemi Abodunrin's Portfolio
+-->
+<html>
+	<head>
+		<title>Text Gen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="filename.html" class="logo">Title</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!--span class="date">April 25, 2017</span-->
+									<h1>Title<br />
+                                        </h1>
+                                    
+								</header>
+								<div class="image main"><a href="https://github.com/deCrystals/TextGeneration/blob/main/gpt2.py"><img src="images/gpt2.png" alt="" /></a></div>
+								<h3>Problem Statement</h3>
+									<p> Write out the problem statement</p>
+                                <p style="margin-bottom: 10px"><strong>Goals</strong></p>
+								<p style="margin-bottom: 10px">Text Generation is a subfield of Natural Language Processing (NLP) dedicated to developing software systems that can produce coherent and comprehensible text. 
+									This field is crucial in NLP and strives to create realistic and indistinguishable text from human-written content.
+                                    One approach that has made a significant impact in the field of natural language processing (NLP) is the Generative Pre-Trained Transformer (GPT), which was introduced in 2018.<br /> 
+									Its brilliance lies in its unique semi-supervised training on a massive text corpus. 
+									The model architecture, built on a variant of the Transformer, uses a multi-layered decoder to better handle long-term dependencies in text. This results in the model capturing richer 
+									linguistic structure and performing well across diverse NLP tasks.</p>
+								
+                                <p style="margin-bottom: 10px"><strong>Data Collection</strong></p>
+								 <p style="margin-bottom: 10px">The success of text generation hinges on the quality and relevance of the data it learns from. This initial phase, often called data collection, involves gathering 
+									significant text related to the desired output. It provides the building blocks for the AI system to construct coherent and contextually relevant text.
+									In this project, I used Microsoft Excel to extract text from the public domain BBC news dataset, specifically the General news section. 
+									This rich factual information laid the foundation for the AI model's content generation.
+									</p>
+								<p style="margin-bottom: 10px"><strong> Data Preprocessing</strong></p>
+									<p>Data preprocessing is essential in preparing text for use in text generation models. 
+										It involves cleaning the raw text data to make it compatible with the model for training. Text in its natural 
+									form contains irrelevant characters, punctuation, and inconsistencies that can hinder the model's ability to learn effectively. 
+									Preprocessing tackles these issues by removing unnecessary symbols and emojis, 
+									eliminating duplicate entries to focus on unique patterns, and converting the text to lowercase for consistency. 
+									Additionally, some preprocessing steps normalise the text by stemming or lemmatising words, which
+									 reduces them to their base form. These cleaning techniques significantly improve the data quality the model trains on, 
+									 ultimately leading to better text generation. I used Python’s PyTorch libraries 
+									 for data preprocessing. </p>
+                                <p style="margin-bottom: 10px"><strong>Training/ fine-tuning the model</strong></p> 
+								<p style="margin-bottom: 10px">Training, also referred to as fine-tuning, is where the magic happens! We guide the GPT-2 model to learn the intricacies of text generation. 
+									This involves feeding the model our prepared text data (dataset) and adjusting various settings to optimise its learning process. 
+									Some crucial parameters include the batch size (the amount of data processed at once) and the number of training epochs (repetitions). 
+									An optimiser (AdamW, in this case) helps the model adjust its internal parameters to produce better outputs as it trains.</p>
+                                <p style="margin-bottom: 10px"><strong>Validation and Evaluation</strong>
+								<p style="margin-bottom: 10px">Just like any good student, the model needs to be tested! This phase, known as validation and evaluation, ensures the model performs well on unseen data. We use independent datasets (data the model hasn't seen before) to assess its ability to rigorously generate human-quality text.
+									Several metrics, like ROUGE and BLEU, help us quantify the model's performance by measuring how similar the generated text is to human-written text. Additionally, human evaluation is crucial in assessing factors like coherence, fluency, and overall quality that these metrics might miss. This rigorous testing process allows us to gauge the model's effectiveness and reliability.
+									</p>
+									The importance of rigorous testing cannot be overstated. The trained model undergoes meticulous 
+									scrutiny with independent datasets, ensuring its performance meets the highest standards. 
+									Metrics like ROGUE, BLEU, and human judgment are employed to assess the quality and coherence of the generated text, instilling confidence in the model's reliability. </p>
+                                <p>"The complete code for this project is available <a href="https://github.com/deCrystals/TextGeneration/blob/main/gpt2.py">here</a>"</p>
+
+					</div>
+
+				<!-- Footer --
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: DeCrystals</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
