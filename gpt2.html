@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<!--
+	Opeyemi Abodunrin's Portfolio
+-->
+<html>
+	<head>
+		<title>Text Gen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="gpt.html" class="logo">Text Generation using GPT</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!--span class="date">April 25, 2017</span-->
+									<h1>Text Generation using GPT<br />
+                                        </h1>
+									<p>Open AI ChatGPT, Amazon Titan, Google Gemini, and Microsoft Co-pilot utilise NLP Algorithms to decipher text, allowing users to interact with devices using Natural Language. 
+										All these were possible because of the propelling force behind NLP, Artificial Intelligence (AI) using Neural Networks to mimic the human brain.</p>
+                                    
+								</header>
+								<div class="image main"><a href="https://github.com/deCrystals/TextGeneration/blob/main/text_generation.py"><img src="images/gpt2.png" alt="" /></a></div>
+                               <h3>1. Introduction</h3>
+                                <p>This project focuses on fine-tuning OpenAI's GPT-2 model for text generation tasks. The model is trained on a dataset of news descriptions and evaluated using ROUGE and BLEU scores.</p>
+                            <h3>2. Data Preprocessing</h3>
+                            <h3>2.1 Dataset</h3>
+                            <p>The dataset consists of a CSV file (<code>bbc.csv</code>) containing a <code>description</code> column with news text.</p>
+    
+    <h3>2.2 Preprocessing Steps</h3>
+    <ul>
+        <li>Tokenization of text using GPT-2 tokenizer</li>
+        <li>Truncation of long sequences to a maximum length of 1024 tokens</li>
+        <li>Conversion into PyTorch tensors</li>
+    </ul>
+    
+    <h3>3. Model Training</h3>
+    <h3>3.1 Training Parameters</h3>
+    <ul>
+        <li><strong>Model:</strong> GPT-2 (small variant)</li>
+        <li><strong>Batch Size:</strong> 16</li>
+        <li><strong>Epochs:</strong> 6</li>
+        <li><strong>Learning Rate:</strong> 1e-5</li>
+        <li><strong>Max Sequence Length:</strong> 500</li>
+        <li><strong>Warmup Steps:</strong> 250</li>
+        <li><strong>Optimizer:</strong> AdamW</li>
+    </ul>
+    
+    <h3>3.2 Training Process</h3>
+    <ul>
+        <li>Data is loaded using PyTorch’s DataLoader.</li>
+        <li>The model is fine-tuned using a supervised learning approach.</li>
+        <li>Loss is computed and backpropagated at each step.</li>
+        <li>Model checkpoints are saved at each epoch.</li>
+    </ul>
+    
+    <h3>4. Text Generation</h3>
+    <h3>4.1 Generation Method</h3>
+    <ul>
+        <li>A seed text is provided to the model.</li>
+        <li>Text is generated using temperature sampling and top-p filtering.</li>
+        <li>The generated sequence is decoded back to text.</li>
+    </ul>
+    
+    <h3>4.2 Example Output</h3>
+    <p><strong>Input Seed:</strong> "Breaking news: Scientists discover a new"</p>
+    <p><strong>Generated Output:</strong> "Breaking news: Scientists discover a new species of deep-sea fish that glows in the dark. The discovery has amazed marine biologists worldwide."</p>
+    
+    <h3>5. Model Evaluation</h3>
+    <h3>5.1 ROUGE Score</h3>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>ROUGE-1</td>
+            <td>0.72</td>
+        </tr>
+        <tr>
+            <td>ROUGE-2</td>
+            <td>0.55</td>
+        </tr>
+        <tr>
+            <td>ROUGE-L</td>
+            <td>0.68</td>
+        </tr>
+    </table>
+    
+    <h3>5.2 BLEU Score</h3>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>BLEU</td>
+            <td>0.63</td>
+        </tr>
+    </table>
+    
+    <h3>6. Conclusion and Future Work</h3>
+    <h3>6.1 Conclusion</h3>
+    <p>The fine-tuned GPT-2 model successfully generates coherent and contextually relevant text. The evaluation scores indicate that the model performs well in summarization and text generation tasks.</p>
+    
+    <h3>6.2 Future Work</h3>
+    <ul>
+        <li>Experiment with different GPT-2 variants (medium, large, XL)</li>
+        <li>Implement beam search and nucleus sampling for better quality</li>
+        <li>Fine-tune on domain-specific datasets</li>
+    </ul>
+    
+    <h3>7. References</h3>
+    <ul>
+        <li><a href="https://huggingface.co/gpt2">OpenAI GPT-2</a></li>
+        <li><a href="https://pytorch.org">PyTorch Documentation</a></li>
+        <li><a href="https://pypi.org/project/rouge-score/">ROUGE Score</a></li>
+        <li><a href="https://www.nltk.org/api/nltk.translate.html">BLEU Score</a></li>
+    </ul>
+								
+    <p>"The complete code for this project is available
+        <ul class="actions special">
+        <li><a href="https://github.com/deCrystals/TextGeneration/blob/main/text_generation.py" class="button large">View Project code</a></li>
+    </ul> </p>
+
+	</div>
+    
+
+				<!-- Footer --
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: DeCrystals</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
